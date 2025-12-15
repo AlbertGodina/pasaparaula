@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+/* LOGIN STYLES */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  color: white;
+}
+
+.login-container h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.login-container h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.login-container p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.role-buttons {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.role-btn {
+  padding: 2rem 3rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-weight: bold;
+}
+
+.role-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.role-btn.teacher {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+.role-btn.student {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+}
+
+/* FORM STYLES */
+.form-group {
+  margin: 1.5rem 0;
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.9);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: rgba(255,255,255,0.8);
+  box-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+.submit-btn {
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  background: #45a049;
+  transform: scale(1.05);
+}
+
+.back-btn {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.back-btn:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.error-message {
+  color: #ff6b6b;
+  background: rgba(255,255,255,0.9);
+  padding: 0.8rem;
+  border-radius: 5px;
+  margin: 1rem 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.hint {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+/* DASHBOARD STYLES */
+.dashboard-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: rgba(255,255,255,0.15);
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.dashboard-header h1 {
+  color: white;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.logout-btn {
+  padding: 0.8rem 1.5rem;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.logout-btn:hover {
+  background: rgba(255,255,255,0.3);
+  transform: scale(1.05);
+}
+
+.dashboard-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.dashboard-menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.menu-btn {
+  padding: 2rem;
+  font-size: 1.3rem;
+  background: rgba(255,255,255,0.9);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.menu-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  background: white;
+}
+```
+
+4. **"Commit new file"**
+
+---
+
+## ✅ PAS 10: Verificar l'estructura del repositori
+
+Ara torna a la pàgina principal del teu repositori i comprova que tens aquesta estructura:
+```
+pasapalabra-educativa/
+├── public/
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   ├── auth/
+│   │   │   ├── Login.jsx
+│   │   │   ├── TeacherLogin.jsx
+│   │   │   └── StudentLogin.jsx
+│   │   ├── teacher/
+│   │   │   └── TeacherDashboard.jsx
+│   │   └── student/
+│   │       └── StudentDashboard.jsx
+│   ├── services/
+│   │   ├── storageService.js
+│   │   └── gameLogic.js
+│   ├── utils/
+│   │   └── constants.js
+│   ├── styles/
+│   │   └── App.css
+│   ├── App.jsx
+│   └── index.js
+├── .gitignore
+├── package.json
+├── README.md
+├── ARQUITECTURA_PASAPALABRA.md
+├── EXEMPLES_ROSCOS.md
+└── GUIA_IMPLEMENTACIO.md
+```
+
+---
+
+## 🎉 FINALITZAT!
+
+Ara tens tot el projecte pujat a GitHub! 🚀
+
+### Què pots fer ara?
+
+1. **Compartir el repositori:** Envia l'enllaç a qui vulguis
+2. **Clonar-lo al teu ordinador** per desenvolupar-lo:
+   - Clica el botó verd **"Code"**
+   - Selecciona **"Download ZIP"**
+   - Descomprimeix la carpeta
+   - Obre una terminal a la carpeta
+   - Executa: `npm install` i després `npm start`
+
+3. **Continuar desenvolupant** directament des de GitHub (no recomanat per codi, però es pot fer)
+
+4. **Usar GitHub Desktop** (aplicació visual més fàcil que la terminal)
+
+---
+
+## 📌 Enllaç al teu repositori
+
+El teu repositori està a:
+```
+https://github.com/EL-TEU-NOM-USUARI/pasapalabra-educativa
